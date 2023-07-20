@@ -1,3 +1,4 @@
+import 'package:bookticket/Screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -10,7 +11,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
   static final List<Widget> _pages = <Widget> [
-    const Text('Home Page'),
+    const HomeScreen(),
     const Text('Search Page'),
     const Text('Ticket Page'),
     const Text('Profile Page'),
@@ -40,6 +41,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         showUnselectedLabels: false,
         selectedItemColor: Colors.indigo,
         unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
